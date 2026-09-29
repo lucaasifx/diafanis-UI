@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 100% 99%;
+    --foreground: 222 41% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 41% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 41% 13%;
+
+    --primary: 221 100% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 100% 42%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 231 43% 96%;
+    --muted-foreground: 230 12% 30%;
+
+    --accent: 230 100% 97%;
+    --accent-foreground: 221 100% 35%;
+
+    --destructive: 0 75% 42%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 235 20% 81%;
+    --input: 235 20% 81%;
+    --ring: 221 100% 35%;
+
+    --radius: 0.75rem;
+
+    /* Status dos Compromissos e Prazos (CPC/CLT) - Refined Luminous Tones */
+    --status-fatal-bg: rgba(244, 63, 94, 0.08);
+    --status-fatal-border: rgba(244, 63, 94, 0.22);
+    --status-fatal-text: #9f1239;
+    --status-fatal-icon: #e11d48;
+
+    --status-warning-bg: rgba(245, 158, 11, 0.08);
+    --status-warning-border: rgba(245, 158, 11, 0.24);
+    --status-warning-text: #92400e;
+    --status-warning-icon: #d97706;
+
+    --status-hearing-bg: rgba(37, 99, 235, 0.08);
+    --status-hearing-border: rgba(37, 99, 235, 0.22);
+    --status-hearing-text: #1e40af;
+    --status-hearing-icon: #2563eb;
+
+    --status-holiday-bg: rgba(100, 116, 139, 0.07);
+    --status-holiday-border: rgba(100, 116, 139, 0.18);
+    --status-holiday-text: #334155;
+    --status-holiday-icon: #64748b;
+  }
+
+  .dark {
+    --background: 223 45% 8%;           /* #0b101e */
+    --foreground: 231 100% 97%;         /* #eef0ff */
+
+    --card: 223 43% 10%;                /* #0e1424 */
+    --card-foreground: 231 100% 97%;
+
+    --popover: 223 43% 10%;
+    --popover-foreground: 231 100% 97%;
+
+    /* Azul Real Primário Vibrante para Botões e Itens Ativos */
+    --primary: 221 83% 53%;             /* #2563eb */
+    --primary-foreground: 0 0% 100%;    /* #ffffff */
+
+    /* Azul Safira / Azure Secundário Límpido */
+    --secondary: 213 94% 68%;           /* #60a5fa */
+    --secondary-foreground: 222 47% 11%;/* #0f172a */
+
+    --muted: 223 35% 15%;               /* #161f33 */
+    --muted-foreground: 218 20% 68%;    /* #94a3b8 */
+
+    --accent: 221 83% 53%;              /* #2563eb */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;           /* #ef4444 */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 224 25% 18%;              /* #222d42 */
+    --input: 224 25% 18%;
+    --ring: 221 83% 53%;
+
+    /* Status dos Compromissos e Prazos - Dark (Vidro Translúcido Límpido) */
+    --status-fatal-bg: rgba(244, 63, 94, 0.12);
+    --status-fatal-border: rgba(244, 63, 94, 0.28);
+    --status-fatal-text: #fda4af;
+    --status-fatal-icon: #fb7185;
+
+    --status-warning-bg: rgba(245, 158, 11, 0.12);
+    --status-warning-border: rgba(245, 158, 11, 0.28);
+    --status-warning-text: #fde68a;
+    --status-warning-icon: #fbbf24;
+
+    --status-hearing-bg: rgba(37, 99, 235, 0.14);
+    --status-hearing-border: rgba(96, 165, 250, 0.32);
+    --status-hearing-text: #bfdbfe;
+    --status-hearing-icon: #60a5fa;
+
+    --status-holiday-bg: rgba(148, 163, 184, 0.10);
+    --status-holiday-border: rgba(148, 163, 184, 0.22);
+    --status-holiday-text: #cbd5e1;
+    --status-holiday-icon: #94a3b8;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
