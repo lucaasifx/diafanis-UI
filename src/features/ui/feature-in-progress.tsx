@@ -15,16 +15,18 @@ export interface FeatureInProgressProps {
 }
 
 export const FeatureInProgress: React.FC<FeatureInProgressProps> = ({
-  title = 'Em desenvolvimento',
-  description = 'Esta funcionalidade está sendo desenvolvida com cuidado para a rotina forense do seu escritório.',
+  title = 'Em construção',
+  description = 'Nossa equipe de desenvolvimento está trabalhando sem parar para entregar essa funcionalidade com capricho para você.',
   backTo = '/calendar',
   backLabel = 'Voltar para a página inicial',
 }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-6rem)] px-4 py-12 text-center max-w-lg mx-auto">
-      {/* 1. Título */}
+      {/* 1. Título com tags < > perfeitamente alinhadas e encorpadas */}
       <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground mb-6 font-headline">
-        {title}
+        <span className="text-primary font-bold mr-1.5 select-none">&lt;</span>
+        <span>{title}</span>
+        <span className="text-primary font-bold ml-1.5 select-none">/&gt;</span>
       </h1>
 
       {/* 2. Desenho animado (construção + direito) */}

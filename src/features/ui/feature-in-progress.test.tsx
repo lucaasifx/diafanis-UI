@@ -17,17 +17,19 @@ vi.mock('@tanstack/react-router', () => ({
 }));
 
 describe('FeatureInProgress Component', () => {
-  it('deve renderizar o título limpo "Em desenvolvimento"', () => {
+  it('deve renderizar o título limpo "<Em construção />"', () => {
     render(<FeatureInProgress />);
 
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Em desenvolvimento');
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Em construção');
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('<');
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('/>');
   });
 
-  it('deve renderizar a animação vetorial que referencia construção e direito (balança da justiça)', () => {
+  it('deve renderizar a animação vetorial que referencia construção e direito (guindaste sustentando a balança)', () => {
     render(<FeatureInProgress />);
 
     expect(
-      screen.getByLabelText('Ilustração animada da balança da justiça em construção')
+      screen.getByLabelText('Ilustração animada do guindaste sustentando a balança da justiça com documento e prisma')
     ).toBeInTheDocument();
   });
 
@@ -35,7 +37,7 @@ describe('FeatureInProgress Component', () => {
     render(<FeatureInProgress />);
 
     expect(
-      screen.getByText(/Esta funcionalidade está sendo desenvolvida com cuidado para a rotina forense/i)
+      screen.getByText(/Nossa equipe de desenvolvimento está trabalhando sem parar/i)
     ).toBeInTheDocument();
   });
 
